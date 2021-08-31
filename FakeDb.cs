@@ -5,8 +5,8 @@ namespace gregslist_c_sharp
 {
     public class FakeDb
     {
-        public List<House> houses { get; set; } = new List<House>();
-        public List<Job> jobs { get; set; } = new List<Job>();
-        public List<Car> cars { get; set; } = new List<Car>();
+        public static List<House> Houses { get; set; } = new List<House>();
+        public static List<Job> Jobs { get; set; } = new List<Job>();
+        public static List<Car> Cars { get; set; } = new List<Car>();
     }
 }

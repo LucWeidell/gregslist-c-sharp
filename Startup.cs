@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using gregslist_c_sharp.Service;
 
 namespace gregslist_c_sharp
 {
@@ -28,9 +29,9 @@ namespace gregslist_c_sharp
         {
 
             services.AddControllers();
-            services.AddTransient<housesService>
-            services.AddTransient<carsService>
-            services.AddTransient<jobsService>
+            services.AddTransient<HousesService>();
+            services.AddTransient<CarsService>();
+            services.AddTransient<JobsService>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "gregslist_c_sharp", Version = "v1" });
