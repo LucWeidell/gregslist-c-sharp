@@ -28,6 +28,9 @@ namespace gregslist_c_sharp
         {
 
             services.AddControllers();
+            services.AddTransient<housesService>
+            services.AddTransient<carsService>
+            services.AddTransient<jobsService>
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "gregslist_c_sharp", Version = "v1" });
