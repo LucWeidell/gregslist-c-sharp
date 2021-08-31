@@ -10,11 +10,11 @@ namespace gregslist_c_sharp.Controllers
 
     public class JobsController : ControllerBase
     {
-        private readonly JobsService jobsService;
+        private readonly JobsService _jobsService;
 
     public JobsController(JobsService jobsService)
     {
-      this.jobsService = jobsService;
+      _jobsService = jobsService;
     }
 
     [HttpGet]
@@ -22,7 +22,7 @@ namespace gregslist_c_sharp.Controllers
     {
         try
         {
-            IEnumerable<Job> jobs = jobsService.Get();
+            IEnumerable<Job> jobs = _jobsService.Get();
             return Ok(jobs);
         }
         catch (System.Exception err)
@@ -36,7 +36,7 @@ namespace gregslist_c_sharp.Controllers
     {
         try
         {
-            Job found = jobsService.Get(id);
+            Job found = _jobsService.Get(id);
             return Ok(found);
         }
         catch (System.Exception err)
@@ -50,7 +50,7 @@ namespace gregslist_c_sharp.Controllers
     {
         try
         {
-            Job madeJob = jobsService.Create(rawJob);
+            Job madeJob = _jobsService.Create(rawJob);
             return Ok(madeJob);
         }
         catch (System.Exception err)
@@ -64,7 +64,7 @@ namespace gregslist_c_sharp.Controllers
     {
         try
         {
-            jobsService.Delete(id);
+            _jobsService.Delete(id);
             return Ok("Deleted Job");
         }
         catch (System.Exception err)
