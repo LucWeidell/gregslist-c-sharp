@@ -18,7 +18,7 @@ namespace gregslist_c_sharp.Models
       Rate = rate;
       Hours = hours;
       Description = description;
-      Id = new System.Guid().ToString();
+      Id = System.Guid.NewGuid().ToString();
 
     }
     }

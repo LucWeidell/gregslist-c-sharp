@@ -21,7 +21,7 @@ namespace gregslist_c_sharp.Models
       Price = price;
       ImgUrl = imgUrl;
       Description = description;
-      Id = new System.Guid().ToString();
+      Id = System.Guid.NewGuid().ToString();
 
     }
     }

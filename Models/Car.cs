@@ -22,7 +22,7 @@ namespace gregslist_c_sharp.Models
       Description = description;
       ImgUrl = imgUrl;
 
-      Id = new System.Guid().ToString();
+      Id = System.Guid.NewGuid().ToString();
 
     }
     }
